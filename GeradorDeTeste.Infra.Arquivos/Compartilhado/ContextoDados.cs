@@ -1,12 +1,12 @@
-﻿using GeradorDeTestes2024.ModuloDisciplina;
-using GeradorDeTestes2024.ModuloMateria;
-using GeradorDeTestes2024.ModuloQuestao;
-using GeradorDeTestes2024.ModuloTeste;
+﻿using GeradorDeTestes2024.Dominio.ModuloDisciplina;
+using GeradorDeTestes2024.Dominio.ModuloMateria;
+using GeradorDeTestes2024.Dominio.ModuloQuestao;
+using GeradorDeTestes2024.Dominio.ModuloTeste;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 
-namespace GeradorDeTestes2024.Compartilhado
+namespace GeradorDeTestes2024.Infra.Arquivos.Compartilhado
 {
     public class ContextoDados
     {

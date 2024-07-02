@@ -1,8 +1,9 @@
-﻿using GeradorDeTestes2024.Compartilhado;
-using GeradorDeTestes2024.ModuloDisciplina;
-using GeradorDeTestes2024.ModuloQuestao;
+﻿using GeradorDeTestes2024.Dominio.ModuloDisciplina;
+using GeradorDeTestes2024.Dominio.ModuloQuestao;
+using GeradorDeTestes2024.Dominio.ModuloTeste;
+using GeradorDeTestes2024.Infra.Arquivos.Compartilhado;
 
-namespace GeradorDeTestes2024.ModuloTeste
+namespace GeradorDeTestes2024.Infra.Arquivos.ModuloTeste
 {
     public class RepositorioTeste : RepositorioBaseEmArquivo<Teste>, IRepositorioTeste
     {
@@ -12,22 +13,12 @@ namespace GeradorDeTestes2024.ModuloTeste
                 contadorId = contexto.Questoes.Max(i => i.Id) + 1;
         }
 
-        public void atualizarDependenciaDisciplina(Disciplina disciplinaSelecionada, Disciplina disciplinaEditada)
-        {
-            List<Teste> teste = new List<Teste>();
-
-            foreach (Teste t in contexto.Testes)
-            {
-                if (t.Disciplina.Id == disciplinaSelecionada.Id)
-                    t.Disciplina = disciplinaEditada;
-            }
-        }
-
         public override bool Excluir(int id)
         {
             Teste teste = SelecionarPorId(id);
 
             List<Questao> questoes = new List<Questao>();
+
             foreach (Questao q in contexto.Questoes)
             {
                 if (q.Testes.Find(t => t.Id == teste.Id) != null)

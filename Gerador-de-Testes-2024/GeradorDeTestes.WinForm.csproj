@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Dados\**" />
+    <EmbeddedResource Remove="Dados\**" />
+    <None Remove="Dados\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <COMReference Include="WMPLib">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
@@ -45,12 +51,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dados\" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+    <PackageReference Include="QuestPDF" Version="2024.6.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
-    <PackageReference Include="QuestPDF" Version="2024.6.4" />
+    <ProjectReference Include="..\GeradorDeTeste.Dominio\GeradorDeTeste.Dominio.csproj" />
+    <ProjectReference Include="..\GeradorDeTeste.Infra.Arquivos\GeradorDeTeste.Infra.Arquivos.csproj" />
+    <ProjectReference Include="..\GeradorDeTeste.Infra.Sql\GeradorDeTeste.Infra.Sql.csproj" />
   </ItemGroup>
 
 </Project>

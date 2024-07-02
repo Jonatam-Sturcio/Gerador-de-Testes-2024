@@ -1,10 +1,14 @@
-﻿namespace GeradorDeTestes2024.ModuloQuestao
+﻿namespace GeradorDeTestes2024.Dominio.ModuloQuestao
 {
     public class Alternativa
     {
         public string Descricao { get; set; }
         public bool Correta { get; set; }
 
+        public Alternativa()
+        {
+
+        }
         public Alternativa(string descricao)
         {
             Descricao = descricao;
@@ -25,7 +29,7 @@
             Correta = false;
         }
 
-        internal void RefatorarModeloAlternativa(int count)
+        public void RefatorarModeloAlternativa(int count)
         {
             if (Descricao.Contains("->"))
                 Descricao = Descricao.Split(" ")[2];

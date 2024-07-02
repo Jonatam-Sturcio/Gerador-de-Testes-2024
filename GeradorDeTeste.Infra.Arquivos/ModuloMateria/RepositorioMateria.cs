@@ -1,6 +1,7 @@
-﻿using GeradorDeTestes2024.Compartilhado;
+﻿using GeradorDeTestes2024.Dominio.ModuloMateria;
+using GeradorDeTestes2024.Infra.Arquivos.Compartilhado;
 
-namespace GeradorDeTestes2024.ModuloMateria
+namespace GeradorDeTestes2024.Infra.Arquivos.ModuloMateria
 {
     public class RepositorioMateria : RepositorioBaseEmArquivo<Materia>, IRepositorioMateria
     {

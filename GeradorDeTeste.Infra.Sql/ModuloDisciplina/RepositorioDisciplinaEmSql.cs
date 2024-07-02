@@ -1,6 +1,7 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using GeradorDeTestes2024.Dominio.ModuloDisciplina;
+using Microsoft.Data.SqlClient;
 
-namespace GeradorDeTestes2024.ModuloDisciplina
+namespace GeradorDeTestes2024.Infra.Sql.ModuloDisciplina
 {
     public class RepositorioDisciplinaEmSql : IRepositorioDisciplina
     {

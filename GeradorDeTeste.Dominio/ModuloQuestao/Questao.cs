@@ -1,8 +1,8 @@
-﻿using GeradorDeTestes2024.Compartilhado;
-using GeradorDeTestes2024.ModuloMateria;
-using GeradorDeTestes2024.ModuloTeste;
+﻿using GeradorDeTestes2024.Dominio.Compartilhado;
+using GeradorDeTestes2024.Dominio.ModuloMateria;
+using GeradorDeTestes2024.Dominio.ModuloTeste;
 
-namespace GeradorDeTestes2024.ModuloQuestao
+namespace GeradorDeTestes2024.Dominio.ModuloQuestao
 {
     public class Questao : EntidadeBase
     {

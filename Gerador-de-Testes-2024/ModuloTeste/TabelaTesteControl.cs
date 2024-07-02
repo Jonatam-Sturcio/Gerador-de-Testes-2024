@@ -1,4 +1,5 @@
 ﻿using GeradorDeTestes2024.Compartilhado;
+using GeradorDeTestes2024.Dominio.ModuloTeste;
 
 namespace GeradorDeTestes2024.ModuloTeste
 {

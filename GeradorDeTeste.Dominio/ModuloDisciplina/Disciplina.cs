@@ -1,9 +1,9 @@
-﻿using GeradorDeTestes2024.Compartilhado;
-using GeradorDeTestes2024.ModuloMateria;
-using GeradorDeTestes2024.ModuloQuestao;
-using GeradorDeTestes2024.ModuloTeste;
+﻿using GeradorDeTestes2024.Dominio.Compartilhado;
+using GeradorDeTestes2024.Dominio.ModuloMateria;
+using GeradorDeTestes2024.Dominio.ModuloQuestao;
+using GeradorDeTestes2024.Dominio.ModuloTeste;
 
-namespace GeradorDeTestes2024.ModuloDisciplina
+namespace GeradorDeTestes2024.Dominio.ModuloDisciplina
 {
     public class Disciplina : EntidadeBase
     {
@@ -61,7 +61,7 @@ namespace GeradorDeTestes2024.ModuloDisciplina
             return $"{Nome}";
         }
 
-        internal decimal QuantidadeQuestoes(List<Questao> questoes, string serie)
+        public decimal QuantidadeQuestoes(List<Questao> questoes, string serie)
         {
             int contador = 0;
 
@@ -74,7 +74,7 @@ namespace GeradorDeTestes2024.ModuloDisciplina
             return contador;
         }
 
-        internal List<Questao> ListaQuestoes(List<Questao> questoes, string serie)
+        public List<Questao> ListaQuestoes(List<Questao> questoes, string serie)
         {
             List<Questao> lista = new List<Questao>();
 

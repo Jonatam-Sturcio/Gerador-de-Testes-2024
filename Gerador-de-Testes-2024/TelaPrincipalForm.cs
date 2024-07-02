@@ -1,4 +1,11 @@
 using GeradorDeTestes2024.Compartilhado;
+using GeradorDeTestes2024.Dominio.ModuloDisciplina;
+using GeradorDeTestes2024.Dominio.ModuloMateria;
+using GeradorDeTestes2024.Dominio.ModuloQuestao;
+using GeradorDeTestes2024.Dominio.ModuloTeste;
+using GeradorDeTestes2024.Infra.Arquivos.Compartilhado;
+using GeradorDeTestes2024.Infra.Arquivos.ModuloTeste;
+using GeradorDeTestes2024.Infra.Sql.ModuloDisciplina;
 using GeradorDeTestes2024.ModuloDisciplina;
 using GeradorDeTestes2024.ModuloMateria;
 using GeradorDeTestes2024.ModuloQuestao;
@@ -26,8 +33,8 @@ namespace GeradorDeTestes2024
             Instancia = this;
 
             repositorioDisciplina = new RepositorioDisciplinaEmSql();
-            repositorioMateria = new RepositorioMateria(contexto);
-            repositorioQuestao = new RepositorioQuestao(contexto);
+            repositorioMateria = new RepositorioMateriaEmSql();
+            repositorioQuestao = new RepositorioQuestaoEmSql();
             repositorioTeste = new RepositorioTeste(contexto);
         }
 

@@ -1,4 +1,4 @@
-﻿namespace GeradorDeTestes2024.ModuloDisciplina
+﻿namespace GeradorDeTestes2024.Dominio.ModuloDisciplina
 {
     public interface IRepositorioDisciplina
     {

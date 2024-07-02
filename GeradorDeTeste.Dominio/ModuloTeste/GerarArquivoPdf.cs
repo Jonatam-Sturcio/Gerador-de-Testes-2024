@@ -1,11 +1,11 @@
-﻿using GeradorDeTestes2024.ModuloDisciplina;
-using GeradorDeTestes2024.ModuloMateria;
-using GeradorDeTestes2024.ModuloQuestao;
+﻿using GeradorDeTestes2024.Dominio.ModuloDisciplina;
+using GeradorDeTestes2024.Dominio.ModuloMateria;
+using GeradorDeTestes2024.Dominio.ModuloQuestao;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
-namespace GeradorDeTestes2024.ModuloTeste
+namespace GeradorDeTestes2024.Dominio.ModuloTeste
 {
     public class GerarArquivoPdf
     {
@@ -73,14 +73,6 @@ namespace GeradorDeTestes2024.ModuloTeste
                 caminho = $"{caminho}\\{testeSelecionado.Titulo} - com gabarito.pdf";
             else
                 caminho = $"{caminho}\\{testeSelecionado.Titulo}.pdf";
-
-
-            if (File.Exists(caminho))
-            {
-                DialogResult resultado = MessageBox.Show("Já existe um arquivo com esse nome! Deseja substitui-lo?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (resultado != DialogResult.Yes)
-                    return false;
-            }
 
 
             Document.Create(container =>

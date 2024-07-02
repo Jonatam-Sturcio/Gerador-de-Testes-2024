@@ -1,4 +1,4 @@
-﻿namespace GeradorDeTestes2024.Compartilhado
+﻿namespace GeradorDeTestes2024.Dominio.Compartilhado
 {
     public abstract class EntidadeBase
     {

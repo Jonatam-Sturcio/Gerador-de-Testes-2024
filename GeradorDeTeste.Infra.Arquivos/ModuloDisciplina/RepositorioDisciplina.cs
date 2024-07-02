@@ -1,6 +1,7 @@
-﻿using GeradorDeTestes2024.Compartilhado;
+﻿using GeradorDeTestes2024.Dominio.ModuloDisciplina;
+using GeradorDeTestes2024.Infra.Arquivos.Compartilhado;
 
-namespace GeradorDeTestes2024.ModuloDisciplina
+namespace GeradorDeTestes2024.Infra.Arquivos.ModuloDisciplina
 {
     public class RepositorioDisciplina : RepositorioBaseEmArquivo<Disciplina>, IRepositorioDisciplina
     {

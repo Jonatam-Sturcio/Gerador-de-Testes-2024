@@ -1,4 +1,6 @@
-﻿namespace GeradorDeTestes2024.Compartilhado
+﻿using GeradorDeTestes2024.Dominio.Compartilhado;
+
+namespace GeradorDeTestes2024.Infra.Arquivos.Compartilhado
 {
     public abstract class RepositorioBaseEmArquivo<T> where T : EntidadeBase
     {

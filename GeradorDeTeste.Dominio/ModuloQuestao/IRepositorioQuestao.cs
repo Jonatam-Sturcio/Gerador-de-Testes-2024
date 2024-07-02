@@ -1,4 +1,4 @@
-﻿namespace GeradorDeTestes2024.ModuloQuestao
+﻿namespace GeradorDeTestes2024.Dominio.ModuloQuestao
 {
     public interface IRepositorioQuestao
     {

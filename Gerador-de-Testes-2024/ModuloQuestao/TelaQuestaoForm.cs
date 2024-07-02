@@ -1,5 +1,6 @@
 ﻿using GeradorDeTestes2024.Compartilhado;
-using GeradorDeTestes2024.ModuloMateria;
+using GeradorDeTestes2024.Dominio.ModuloMateria;
+using GeradorDeTestes2024.Dominio.ModuloQuestao;
 
 namespace GeradorDeTestes2024.ModuloQuestao
 {
@@ -131,7 +132,7 @@ namespace GeradorDeTestes2024.ModuloQuestao
                 TelaPrincipalForm.Instancia.AtualizarRodape(erros[0]);
                 DialogResult = DialogResult.None;
             }
-            if (questao.EnunciadoIgual(questoes))
+            if (questao.EnunciadoIgual(questoes) && id == -1)
             {
                 TelaPrincipalForm.Instancia.AtualizarRodape("Não é possível cadastrar uma questão com o mesmo enunciado");
                 DialogResult = DialogResult.None;

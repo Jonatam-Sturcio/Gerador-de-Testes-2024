@@ -1,4 +1,4 @@
-﻿namespace GeradorDeTestes2024.ModuloMateria
+﻿namespace GeradorDeTestes2024.Dominio.ModuloMateria
 {
     public interface IRepositorioMateria
     {
